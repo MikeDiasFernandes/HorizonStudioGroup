@@ -151,10 +151,10 @@ body {
    -webkit-backdrop-filter: blur(12px);
    border: 1px solid rgba(255, 255, 255, 0.2);
    border-radius: 40px;
-   padding: 10px 20px;
+   padding: 8px 14px;
    margin: 0;
    width: auto;
-   gap: 18px;
+   gap: 12px;
   }
 
   .nav-link {
@@ -168,8 +168,8 @@ body {
   }
 
   .nav-icon {
-   width: 20px;
-   height: 20px;
+   width: 18px;
+   height: 18px;
    stroke: #ffffff;
    filter: drop-shadow(1px 0 0 #000) 
            drop-shadow(0 1px 0 #000) 
@@ -182,9 +182,9 @@ body {
   }
 
   .nav-btn {
-   padding: 6px 12px;
+   padding: 5px 10px;
    width: auto;
-   font-size: 10px;
+   font-size: 9px;
    font-weight: 800;
    height: auto;
    border-radius: 20px;
