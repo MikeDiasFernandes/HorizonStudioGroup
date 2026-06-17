@@ -118,38 +118,45 @@ body {
  @media screen and (max-width: 1030px) {
   left: 20px;
   right: 20px;
-  top: 30px;
-  
+  top: 20px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+
   .nav-logo-brand {
-   font-size: 18px;
-   letter-spacing: 2px;
+    font-size: 20px;
+    letter-spacing: 3px;
   }
 
   .nav-right-group {
-   gap: 10px;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
   }
-  
+
   .nav-link {
-   display: inline-flex;
-   pointer-events: auto;
+    display: inline-flex;
+    pointer-events: auto;
+    height: auto;
   }
 
   .nav-icon {
-   width: 18px;
-   height: 18px;
+    width: 22px;
+    height: 22px;
   }
 
   .nav-text {
-   display: none !important;
+    display: none !important;
   }
-  
+
   .nav-btn {
-   padding: 0;
-   font-size: 9px;
+    padding: 0;
+    font-size: 11px;
+    height: auto;
   }
-  
+
   .lang-selector {
-   display: none;
+    display: none;
   }
  }
  
@@ -1434,8 +1441,29 @@ marquee {
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  svg {
+   transition: transform 0.3s;
+  }
+  
   &:hover {
    transform: scale(1.1);
+  }
+  
+  @media screen and (max-width: 900px) {
+   svg {
+    width: 24px;
+    height: 24px;
+   }
+  }
+ }
+}
+
+@media screen and (max-width: 900px) {
+ .orcamento-nav {
+  .nav-logo-brand {
+   font-size: 18px;
+   letter-spacing: 2px;
   }
  }
 }
@@ -1609,5 +1637,6 @@ marquee {
   }
  }
 }
+
 
 
