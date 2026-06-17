@@ -120,24 +120,39 @@ body {
   right: 20px;
   top: 30px;
   
+  .nav-logo-brand {
+   font-size: 18px;
+   letter-spacing: 2px;
+  }
+
   .nav-right-group {
-   gap: 15px;
+   gap: 10px;
   }
   
   .nav-link {
-   display: none;
+   display: inline-flex;
+   pointer-events: auto;
+  }
+
+  .nav-icon {
+   width: 18px;
+   height: 18px;
+  }
+
+  .nav-text {
+   display: none !important;
   }
   
   .nav-btn {
-   padding: 12px 16px;
-   font-size: 10px;
+   padding: 0;
+   font-size: 9px;
   }
   
   .lang-selector {
    display: none;
   }
  }
-
+ 
  .nav-logo-brand {
   position: relative;
   font-family: 'Inter', sans-serif;
@@ -1594,4 +1609,5 @@ marquee {
   }
  }
 }
+
 
