@@ -143,7 +143,7 @@ body {
    display: flex;
    position: static;
    flex-direction: row;
-   flex-wrap: nowrap;
+   flex-wrap: wrap;
    justify-content: center;
    align-items: center;
    background: rgba(255, 255, 255, 0.1);
@@ -151,10 +151,11 @@ body {
    -webkit-backdrop-filter: blur(12px);
    border: 1px solid rgba(255, 255, 255, 0.2);
    border-radius: 40px;
-   padding: 8px 14px;
+   padding: 6px 10px;
    margin: 0;
    width: auto;
-   gap: 12px;
+   max-width: 100%;
+   gap: 8px;
   }
 
   .nav-link {
@@ -168,8 +169,8 @@ body {
   }
 
   .nav-icon {
-   width: 18px;
-   height: 18px;
+   width: 16px;
+   height: 16px;
    stroke: #ffffff;
    filter: drop-shadow(1px 0 0 #000) 
            drop-shadow(0 1px 0 #000) 
@@ -182,9 +183,9 @@ body {
   }
 
   .nav-btn {
-   padding: 5px 10px;
+   padding: 4px 8px;
    width: auto;
-   font-size: 9px;
+   font-size: 8px;
    font-weight: 800;
    height: auto;
    border-radius: 20px;
@@ -1678,6 +1679,7 @@ marquee {
   }
  }
 }
+
 
 
 
