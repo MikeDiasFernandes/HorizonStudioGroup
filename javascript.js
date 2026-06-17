@@ -5,6 +5,25 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 window.scrollTo(0, 0);
+
+// Hamburger Menu Logic
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navRightGroup = document.getElementById('navRightGroup');
+if (mobileMenuBtn) {
+  mobileMenuBtn.addEventListener('click', () => {
+    navRightGroup.classList.toggle('active');
+  });
+}
+
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    if (navRightGroup && navRightGroup.classList.contains('active')) {
+      navRightGroup.classList.remove('active');
+    }
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo(0, 0);
     document.querySelectorAll('.vertical-scroll-container').forEach(el => {
@@ -582,8 +601,21 @@ function smoothVerticalSnapTo(element, targetY, duration) {
 // Navigation anchor scrolling mapping
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', async function (e) {
-    const targetId = this.getAttribute('href');
     e.preventDefault();
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (!targetElement) return;
+
+    if (window.innerWidth <= 900) {
+      // Smooth native scroll for mobile vertical layout
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      return;
+    }
     
     if (animationFrameId) {
       cancelAnimationFrame(animationFrameId);
@@ -593,7 +625,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       cancelAnimationFrame(verticalAnimationFrameId);
       verticalAnimationFrameId = null;
     }
-
     if (targetId === '#') {
       const verticalParent = document.querySelector('.vertical-scroll-container');
       if (verticalParent) {
@@ -603,8 +634,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       return;
     }
 
-    const targetElement = document.querySelector(targetId);
-    
     if (targetElement) {
       // Check if the target is inside our new vertical column
       const verticalParent = targetElement.closest('.vertical-scroll-container');
@@ -666,4 +695,5 @@ if (videoElement1 && videoElement2) {
     isVideo1Active = !isVideo1Active;
   }, 2000); // Crossfade every 2 seconds
 }
+
 
