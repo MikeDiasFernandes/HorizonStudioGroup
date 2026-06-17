@@ -6,25 +6,28 @@ if ('scrollRestoration' in history) {
 }
 window.scrollTo(0, 0);
 
-// Hamburger Menu Logic
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navRightGroup = document.getElementById('navRightGroup');
-if (mobileMenuBtn) {
-  mobileMenuBtn.addEventListener('click', () => {
-    navRightGroup.classList.toggle('active');
-  });
-}
-
-// Close menu when a link is clicked
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    if (navRightGroup && navRightGroup.classList.contains('active')) {
-      navRightGroup.classList.remove('active');
-    }
-  });
-});
+// Initialize after DOM load
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Hamburger Menu Logic
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navRightGroup = document.getElementById('navRightGroup');
+    if (mobileMenuBtn && navRightGroup) {
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        navRightGroup.classList.toggle('active');
+      });
+    }
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navRightGroup && navRightGroup.classList.contains('active')) {
+          navRightGroup.classList.remove('active');
+        }
+      });
+    });
+
     window.scrollTo(0, 0);
     document.querySelectorAll('.vertical-scroll-container').forEach(el => {
         el.scrollTop = 0;
