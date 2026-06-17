@@ -117,19 +117,23 @@ body {
  transform: translateY(-50%);
 
  .mobile-menu-btn {
-  display: none;
+  display: none !important;
  }
 
- @media screen and (max-width: 1030px) {
+ @media screen and (max-width: 900px) {
   transform: none;
   left: 20px;
   right: 20px;
   top: 20px;
 
   .mobile-menu-btn {
-   display: flex;
+   display: flex !important;
    color: #ffffff;
    cursor: pointer;
+   z-index: 105;
+   svg {
+    pointer-events: none;
+   }
   }
 
   .nav-logo-brand {
@@ -154,7 +158,7 @@ body {
    align-items: flex-start;
    
    &.active {
-    display: flex;
+    display: flex !important;
    }
   }
 
@@ -1674,7 +1678,6 @@ marquee {
   }
  }
 }
-
 
 
 
