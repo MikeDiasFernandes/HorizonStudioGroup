@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento - Horizon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body class="orcamento-body">
+
+<nav class="orcamento-nav">
+    <a href="index.html" class="nav-logo-brand" data-text="HORIZON">HORIZON</a>
+    <a href="index.html" class="nav-btn-close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="30" height="30"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </a>
+</nav>
+
+<div class="orcamento-container">
+    <div class="orcamento-left">
+        <h1 data-i18n="orc_title">Estamos felizes pela sua confiança em nossos trabalhos.</h1>
+        <p data-i18n="orc_subtitle">Por favor, preencha o formulário ao lado para darmos seguimento.</p>
+    </div>
+    
+    <div class="orcamento-right">
+        <form class="orcamento-form" id="orcamentoForm">
+            <div class="form-group">
+                <label data-i18n="orc_nome">Nome</label>
+                <input type="text" id="nome" name="Nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label data-i18n="orc_email">Email corporativo</label>
+                <input type="email" id="email" name="Email" required>
+            </div>
+            
+            <div class="form-group phone-group">
+                <label data-i18n="orc_telefone">Telefone</label>
+                <div class="phone-input-wrapper">
+                    <select id="countryCode" name="Codigo_Pais">
+                        <option value="br">🇧🇷 +55</option>
+                        <option value="us">🇺🇸 +1</option>
+                        <option value="es">🇪🇸 +34</option>
+                    </select>
+                    <input type="tel" id="telefone" name="Telefone" placeholder="(11) 99999-9999" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label data-i18n="orc_porte">Porte da empresa</label>
+                <div class="radio-group" id="porte-empresa">
+                    <label class="radio-btn"><input type="radio" name="porte" value="1-50" required> <span data-i18n="orc_p1">1-50 funcionários</span></label>
+                    <label class="radio-btn"><input type="radio" name="porte" value="50-200"> <span data-i18n="orc_p2">50-200 funcionários</span></label>
+                    <label class="radio-btn"><input type="radio" name="porte" value="200-1000"> <span data-i18n="orc_p3">200-1000 funcionários</span></label>
+                    <label class="radio-btn"><input type="radio" name="porte" value="1000-5000"> <span data-i18n="orc_p4">1000-5000 funcionários</span></label>
+                    <label class="radio-btn"><input type="radio" name="porte" value="5000+"> <span data-i18n="orc_p5">5000+ funcionários</span></label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label data-i18n="orc_verba">Verba disponível para projeto</label>
+                <div class="radio-group" id="verba-projeto">
+                    <label class="radio-btn"><input type="radio" name="verba" value="25k-50k" required> <span>R$ 25.000 a R$ 50.000</span></label>
+                    <label class="radio-btn"><input type="radio" name="verba" value="50k-200k"> <span>R$ 50.000 a R$ 200.000</span></label>
+                    <label class="radio-btn"><input type="radio" name="verba" value="200k-500k"> <span>R$ 200.000 a R$ 500.000</span></label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label data-i18n="orc_briefing">Qual o briefing do projeto? Descreva os detalhes.</label>
+                <textarea id="briefing" name="Briefing" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn" data-i18n="orc_enviar">Enviar Formulário</button>
+        </form>
+    </div>
+</div>
+
+<script src="orcamento.js"></script>
+</body>
+</html>
