@@ -666,3 +666,4 @@ if (videoElement1 && videoElement2) {
     isVideo1Active = !isVideo1Active;
   }, 2000); // Crossfade every 2 seconds
 }
+
