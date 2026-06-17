@@ -103,22 +103,43 @@ body {
   align-items: center;
   justify-content: space-between;
   opacity: 0;
+  transform: translateY(-50%);
 }
 @media screen and (max-width: 1030px) {
   .hero-nav {
+    transform: none;
     left: 20px;
     right: 20px;
-    top: 30px;
-  }
-  .hero-nav .nav-right-group {
+    top: 20px;
+    flex-direction: column;
+    justify-content: center;
     gap: 15px;
   }
+  .hero-nav .nav-logo-brand {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .hero-nav .nav-right-group {
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+  }
   .hero-nav .nav-link {
-    display: none;
+    display: inline-flex;
+    pointer-events: auto;
+    height: auto;
+  }
+  .hero-nav .nav-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .hero-nav .nav-text {
+    display: none !important;
   }
   .hero-nav .nav-btn {
-    padding: 12px 16px;
-    font-size: 10px;
+    padding: 0;
+    font-size: 11px;
+    height: auto;
   }
   .hero-nav .lang-selector {
     display: none;
@@ -1404,10 +1425,25 @@ marquee span:before {
   align-items: center;
   justify-content: center;
 }
+.orcamento-nav .nav-btn-close svg {
+  transition: transform 0.3s;
+}
 .orcamento-nav .nav-btn-close:hover {
   transform: scale(1.1);
 }
+@media screen and (max-width: 900px) {
+  .orcamento-nav .nav-btn-close svg {
+    width: 24px;
+    height: 24px;
+  }
+}
 
+@media screen and (max-width: 900px) {
+  .orcamento-nav .nav-logo-brand {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+}
 .orcamento-container {
   display: flex;
   padding: 20vh 5vw 10vh 5vw;
@@ -1567,4 +1603,5 @@ marquee span:before {
 }
 
 /*# sourceMappingURL=style.css.map */
+
 
