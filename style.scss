@@ -114,8 +114,10 @@ body {
  align-items: center;
  justify-content: space-between;
  opacity: 0;
+ transform: translateY(-50%);
 
  @media screen and (max-width: 1030px) {
+  transform: none;
   left: 20px;
   right: 20px;
   top: 20px;
@@ -1637,6 +1639,7 @@ marquee {
   }
  }
 }
+
 
 
 
